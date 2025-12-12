@@ -1,0 +1,27 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: api_gateway
+
+  cloud:
+    gateway:
+      # Key 1: Discovery Configuration (For automatic routing)
+      discovery:
+        locator:
+          enabled: true   # auto map Eureka services
+          # lower-case-service-id should be inside locator, though Spring Boot often tolerates it here
+          lower-case-service-id: true
+
+      # Key 2: Explicit Routes Configuration
+      routes:
+        - id: booking-route
+          uri: lb://BOOKING-SERVICE
+          predicates:
+            - Path=/booking/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: bookingServiceCB
+                fallbackUri: forward:/booking-fallback

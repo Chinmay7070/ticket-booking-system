@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: payment_service
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/payment_service_db?createDatabaseIfNotExist=true
+    username: root
+    password: ${DB_NAME:Chinmay@1234}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+# 🔥 Razorpay config MUST be outside "spring:"
+razorpay:
+  key_id: rzp_test_RntftK4nmST4KX
+  key_secret: knUtP1v136VeAuWcbn20Bc2R

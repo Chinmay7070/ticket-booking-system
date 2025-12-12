@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: booking-Service
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/booking_service_db?createDatabaseIFNotExist=true
+    username: root
+    password: ${DB_NAME:Chinmay@1234}
+  jpa:
+    show-sql: true
+    hibernate:
+     ddl-auto: update
+
+

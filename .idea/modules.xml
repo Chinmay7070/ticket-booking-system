@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/booking_Service/booking-Service (2).iml" filepath="$PROJECT_DIR$/booking_Service/booking-Service (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/payment_sservice/payment_sservice.iml" filepath="$PROJECT_DIR$/payment_sservice/payment_sservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/payment_sservice (1).iml" filepath="$PROJECT_DIR$/payment_sservice (1).iml" />
+    </modules>
+  </component>
+</project>
